@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>February 2026’s Popular Finds (Demo)</title>
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0b1220; --muted:#6b7280; --line:#e5e7eb;
+      --card:#f8fafc; --shadow:0 10px 26px rgba(0,0,0,.07);
+      --r:16px; --max: 860px; --link:#0f766e; --pill:#111827;
+      --accent:#b91c1c;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height:1.55;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:16px 16px 56px}
+    .top{
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      padding:10px 0 8px; border-bottom:1px solid var(--line);
+    }
+    .ad{
+      font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+      padding:4px 8px; border:1px solid var(--line); border-radius:999px;
+      color:var(--muted);
+    }
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      font-size:13px;
+    }
+    .nav a{color:var(--muted); text-decoration:none}
+    .nav a:hover{color:var(--ink)}
+    h1{
+      font-size:32px; line-height:1.1; letter-spacing:-.02em;
+      margin:16px 0 8px;
+    }
+    .dek{margin:0 0 14px; color:var(--muted)}
+    .entry{
+      margin:14px 0;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      overflow:hidden;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .entry h2{
+      font-size:20px; margin:0;
+      padding:14px 14px 10px;
+      letter-spacing:-.01em;
+    }
+    .entry h2 a{color:var(--ink); text-decoration:none}
+    .entry h2 a:hover{color:var(--link)}
+    .thumb{
+      width:100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #eef2ff, #ffffff);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--muted);
+      padding:14px;
+      font-size:13px;
+    }
+    .meta{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      padding:10px 14px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      background:#fff;
+    }
+    .meta .dot{opacity:.6}
+    .rating{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:6px 10px; border:1px solid var(--line);
+      border-radius:999px; background:var(--card);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .rating b{color:var(--ink)}
+    .body{
+      padding:12px 14px 14px;
+      background:#fff;
+    }
+    .body p{margin:0 0 12px}
+    .ctaRow{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-block; text-decoration:none;
+      padding:11px 14px;
+      border-radius:12px;
+      font-weight:800;
+      letter-spacing:-.01em;
+      background: var(--pill);
+      color:#fff;
+    }
+    .btn.alt{background:var(--link)}
+    .subbtn{
+      display:inline-block; text-decoration:none;
+      padding:11px 14px;
+      border-radius:12px;
+      font-weight:800;
+      letter-spacing:-.01em;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--ink);
+    }
+    .gate{
+      margin-top:10px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:var(--card);
+      padding:12px;
+    }
+    .gate .row{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      margin-top:10px;
+    }
+    label{font-size:13px; color:var(--ink)}
+    select{
+      padding:10px 10px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:14px;
+      min-width: 160px;
+    }
+    .check{
+      display:flex; gap:8px; align-items:center;
+      font-size:13px; color:var(--ink);
+    }
+    .flag{
+      display:inline-block;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#fff1f2;
+      border:1px solid var(--line);
+      color: var(--accent);
+    }
+    .small{font-size:12px; color:var(--muted); margin-top:8px}
+    @media (max-width:520px){
+      h1{font-size:26px}
+      .entry h2{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="ad">Ad</div>
+      <div class="nav">
+        <a href="#">Popular</a>
+        <a href="#">Newest</a>
+        <a href="#">Top Rated</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+
+    <h1>February 2026’s Most Clicked Finds (Client Preview)</h1>
+    <p class="dek">This page mimics the “front/list entry” experience. Click through to see the full article layouts.</p>
+
+    <!-- ENTRY 1 (Senior-Savers vibe) -->
+    <section class="entry" id="entry-1">
+      <h2>
+        <a href="article-1.html">Updated: Women 50+ Are Switching to a 3-Minute LED Mask (Winter BOGO + HSA/FSA)</a>
+      </h2>
+
+      <div class="thumb">
+        THUMBNAIL PLACEHOLDER (Article 1)
+        <!-- AI PROMPT (Thumbnail):
+Photoreal editorial thumbnail, woman age 55–65 holding a softly glowing red/amber flexible LED face mask next to her face, cozy indoor lighting, warm tones, clean background, high trust, 16:9, sharp focus, no text, no logos.
+Negative prompts: brand names, watermarks, fake UI, exaggerated “before/after”, distorted face.
+        -->
+      </div>
+
+      <div class="meta">
+        <span class="rating"><b>1,800+</b> reviews</span>
+        <span class="dot">•</span>
+        <span>Updated Feb 2026</span>
+        <span class="dot">•</span>
+        <span>Share</span>
+        <span class="dot">•</span>
+        <span class="flag">Winter Special</span>
+      </div>
+
+      <div class="body">
+        <p>
+          A flexible, multi-wavelength LED mask designed around <b>3-minute sessions</b> is trending because it’s fast enough to stick with.
+          Right now, shoppers are clicking for the <b>Winter BOGO</b> — and many are looking for the <b>HSA/FSA checkout option</b> (plan/provider dependent).
+        </p>
+
+        <div class="gate" data-target="article-1.html">
+          <label><b>To continue, select your age:</b></label>
+          <div class="row">
+            <select aria-label="Age selection">
+              <option value="">Select age</option>
+              <option>Under 50</option>
+              <option>50–59</option>
+              <option>60–69</option>
+              <option>70+</option>
+            </select>
+
+            <label class="check">
+              <input type="checkbox" />
+              I want to see HSA/FSA option
+            </label>
+
+            <button class="btn alt" type="button">Continue →</button>
+            <a class="subbtn" href="article-1.html">Read more</a>
+          </div>
+          <div class="small">Note: HSA/FSA usage depends on your plan/provider. Results vary.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTRY 2 (UnforgettableGadgets vibe) -->
+    <section class="entry" id="entry-2">
+      <h2>
+        <a href="article-2.html">BREAKING: The “3-Minute LED Mask” Editors Recommend Is Running a Winter BOGO (HSA/FSA Option)</a>
+      </h2>
+
+      <div class="thumb">
+        THUMBNAIL PLACEHOLDER (Article 2)
+        <!-- AI PROMPT (Thumbnail):
+Photoreal clean gadget thumbnail: close-up of a flexible LED face mask glowing warm red/amber on a neat bathroom counter beside a phone showing “3:00” timer (generic UI, no brand names). High-end product photography, 16:9, crisp reflections, minimal background.
+Negative prompts: brand logos, watermarks, messy background, unrealistic glow, text overlays.
+        -->
+      </div>
+
+      <div class="meta">
+        <span class="rating"><b>Top Rated</b> in Beauty Gadgets</span>
+        <span class="dot">•</span>
+        <span>Updated Feb 2026</span>
+        <span class="dot">•</span>
+        <span>Share</span>
+        <span class="dot">•</span>
+        <span class="flag">BOGO</span>
+      </div>
+
+      <div class="body">
+        <p>
+          Short routines convert. This presell highlights the mask’s <b>3-minute sessions</b>, tech-style proof, and the two strongest motivators:
+          <b>Winter BOGO</b> + <b>HSA/FSA checkout</b> (where available).
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn alt" href="article-2.html">Read more →</a>
+          <a class="subbtn" href="article-2.html#offer">Jump to Offer</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Micro-gate "Continue" -> forwards into the article (adds harmless query params for demo)
+    document.querySelectorAll('.gate').forEach(g => {
+      const btn = g.querySelector('button');
+      const sel = g.querySelector('select');
+      const chk = g.querySelector('input[type="checkbox"]');
+      btn.addEventListener('click', () => {
+        const age = encodeURIComponent(sel.value || 'unknown');
+        const hsa = chk.checked ? '1' : '0';
+        const target = g.getAttribute('data-target');
+        window.location.href = `${target}?age=${age}&hsa=${hsa}`;
+      });
+    });
+  </script>
+</body>
+</html>
